@@ -1,0 +1,64 @@
+.hero {
+    background-color: rgb(70, 195, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+}
+
+.heroimg {
+    width: 100%; /* Cover the full width of the parent container */
+    height: 100vh; /* Cover the full height of the viewport */
+    object-fit: cover; /* Ensure the image maintains aspect ratio and fills the container */
+    object-position: center; /* Center the image */
+}
+
+@media (min-width: 900px) {
+    .herotext {
+        flex-grow: 4;
+        padding: 2rem 5rem;
+    }
+
+    .heroimg {
+        width: 30%;
+        padding: 3rem;
+        border-radius: 5rem;
+    }
+
+    .points {
+        text-align: left;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+    }
+
+    .herotext {
+        margin: 2rem 1rem;
+    }
+
+    .heroimg {
+        width: 80%;
+        padding: 1rem;
+        border-radius: 2rem;
+        margin: auto;
+    }
+
+    .points {
+        text-align: center;
+    }
+}
+
+.herotext>#title {
+    font-size: 50px;
+    margin: 2rem 0rem;
+}
+
+.points {
+    margin: 2rem 0rem;
+}
